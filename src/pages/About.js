@@ -1,12 +1,12 @@
 import React from 'react';
 import Layout from '../templates/Layout';
 
-const Home = () => {
+const About = () => {
   return (
     <Layout>
-      <h1>First page Application</h1>
+      <h1>About page</h1>
     </Layout>
   )
 }
 
-export default Home;
+export default About;
