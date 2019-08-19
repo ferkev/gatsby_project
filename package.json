@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "develop": "cross-env GATSBY_GRAPQL_IDE=playground gatsby develop",
-    "start": "npm develop",
+    "start": "npm run develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "format": "prettier --write \"src/**/*.{js, jsx}\"",
