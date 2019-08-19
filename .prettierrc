@@ -1,0 +1,9 @@
+{
+  "tabWidth": 2,
+  "endOfLine": "lf",
+  "singleQuote": true,
+  "useTabs": true,
+  "jsxSingleQuote": false,
+  "SemiColons": true,
+  "requirePragma": true
+}

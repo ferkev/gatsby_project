@@ -1,11 +1,28 @@
 {
   "name": "mywebsite",
   "version": "1.0.0",
+  "private": true,
   "description": "a personnal blog and poc for gatsbyjs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "develop": "cross-env GATSBY_GRAPHQL_IDE=playground gatsby develop",
+    "start": "npm develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "format": "prettier --write \"src/**/*.{js, jsx}\"",
+    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
+    "test": "jest"
   },
   "author": "kevin le franc",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "gatsby": "^2.13.67",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "jest": "^24.9.0",
+    "prettier": "^1.18.2"
+  }
 }
