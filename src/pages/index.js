@@ -1,12 +1,11 @@
 import React from 'react';
-import Layout from '../templates/Layout';
 
-const Home = () => {
+const Hello = () => {
   return (
-    <Layout>
-      <h1>First page Application</h1>
-    </Layout>
+    <div>
+      <h1>Hello from gatsby</h1>
+    </div>
   )
 }
 
-export default Home;
+export default Hello;
