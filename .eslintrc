@@ -1,5 +1,5 @@
 {
-  "extends": ["eslint:recommended", "prettier", "prettier/react"]
+  "extends": ["eslint:recommended", "prettier", "prettier/react"],
   "parserOptions": {
     "ecmaVersion": 9,
     "ecmaFeatures": {
@@ -14,7 +14,6 @@
     "no-unused-labels": "off",
     "no-unused-expressions": "off",
   },
-  "extends": "",
   "plugins": [],
   "env": {
     "es6": true,
