@@ -1,7 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import PropsType from 'prop-types';
-import useSiteMetadata from '../hooks/use-sitemetadata';
+import useSiteMetadata from '../hooks/useSiteMetaData';
 
 const Seo = ({ pageTitle, pageDescription, pageLang }) => {
 

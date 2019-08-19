@@ -1,0 +1,27 @@
+.template_header {
+  background-color: #1e3799;
+}
+
+.template_header nav ul {
+  display: flex;
+  flex-direction: row;
+  height: 3rem;
+}
+
+.nav_list li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.nav_list li a:hover {
+  border-bottom: 2px solid #ffffff;
+}
+
+.nav_list li {
+  padding: 1rem;
+}
+
+.nav_list li + li {
+  margin-left: 1rem;
+}

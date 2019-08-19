@@ -1,9 +1,11 @@
 import React from "react";
 import Helmet from 'react-helmet';
 import PropsType from 'prop-types';
-import useSiteMetadata from '../hooks/use-sitemetadata';
+import useSiteMetadata from '../hooks/useSiteMetaData';
 
 import Header from '../Components/Header';
+import '../styles/reset.css';
+import '../styles/global.css';
 
 const Layout = ( {children} ) => {
 
@@ -11,9 +13,7 @@ const Layout = ( {children} ) => {
 
   return (
     <>
-      <header>
-        <Header sitetitle={title}/>
-      </header>
+      <Header sitetitle={title}/>
       <main>
         {children}
       </main>

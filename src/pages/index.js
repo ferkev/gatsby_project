@@ -1,11 +1,11 @@
 import React from 'react';
 import Layout from '../templates/Layout';
 import Seo from '../Components/Seo';
-import useSiteMetaDate from '../hooks/use-siteMetadata';
+import useSiteMetaData from '../hooks/useSiteMetaData';
 
 const Hello = () => {
 
-  const { title } = useSiteMetaDate();
+  const { title } = useSiteMetaData();
 
   return (
     <Layout>
