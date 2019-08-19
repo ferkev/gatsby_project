@@ -1,23 +1,18 @@
 import React from "react";
-import { Link } from 'gatsby';
+import Helmet from 'react-helmet';
+import PropsType from 'prop-types';
+import useSiteMetadata from '../hooks/use-sitemetadata';
+
+import Header from '../Components/Header';
 
 const Layout = ( {children} ) => {
+
+  const { title } = useSiteMetadata();
+
   return (
     <>
       <header>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Logo</Link>
-            </li>
-            <li>
-              <Link to="/About">About</Link>
-            </li>
-            <li>
-              <Link to="/Contact">Contact</Link>
-            </li>
-          </ul>
-        </nav>
+        <Header sitetitle={title}/>
       </header>
       <main>
         {children}
@@ -27,6 +22,10 @@ const Layout = ( {children} ) => {
       </footer>
     </>
   )
+}
+
+Layout.PropsType = {
+  children: PropsType.node.isRequired
 }
 
 export default Layout;
