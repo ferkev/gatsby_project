@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 import './header.css';
 import Menu from './Menu'
 import Close from './Close';
+import Image from '../hooks/useSiteIcons';
 
 const Header = ( {sitetitle} ) => {
 
@@ -11,36 +12,38 @@ const Header = ( {sitetitle} ) => {
 
   useEffect(() => {
     if (menuOpen) {
-      setActiveClass("list_item_header_active")
+      setActiveClass("nav_list_active")
     }
     else {
-      setActiveClass("list_item_header")
+      setActiveClass("nav_list")
     } 
   })
 
   return (
+    <>
     <header className="template_header">
-      <div onClick={() => setMenuOpen(!menuOpen)}>
-        { menuOpen ? 
-          <Close />
-          :
-          <Menu />     
-        }
-      </div>
       <nav>
-        <ul className="nav_list">
-          <li className={activeClass}>
+        <div onClick={() => setMenuOpen(!menuOpen)}>
+          { menuOpen ? 
+            <Close />   
+            :
+            <Menu />
+          }
+        </div>
+      </nav>
+        <ul className={activeClass}>
+          <li>
             <Link to="/">{sitetitle}</Link>
           </li>
-          <li className={activeClass}>
+          <li>
             <Link to="/About">About</Link>
           </li>
-          <li className={activeClass}>
+          <li>
             <Link to="/Contact">Contact</Link>
           </li>
         </ul>
-      </nav>
     </header>
+    </>
   )
 }
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import close from '../svg/close.svg'
+import cancel from '../svg/cancel.svg'
 
 const style = {
   width: "30px",
@@ -7,7 +7,7 @@ const style = {
 
 const Close = () =>  {
   return (
-    <img style={style} src={close} alt="cross"/>
+    <img style={style} src={cancel} alt="cross"/>
   )
 }
 
