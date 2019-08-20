@@ -1,17 +1,32 @@
 .template_header {
   background-color: #1e3799;
-}
-
-.template_header nav ul {
   display: flex;
   flex-direction: row;
-  height: 3rem;
+  align-items: center;
+}
+
+.template_header div {
+  padding: 0.5rem;
+  display: inline-flex;
+  width: 5rem;
+  height: 5rem;
+}
+
+.template_header nav {
+  padding: 0.5rem;
+  display: inline-block;
+}
+
+ul {
+  display: inline-flex;
+  flex-direction: row;
 }
 
 .nav_list li a {
   display: inline-block;
   text-decoration: none;
   color: #ffffff;
+  height: calc(100px - 75px);
 }
 
 .nav_list li a:hover {
@@ -19,9 +34,23 @@
 }
 
 .nav_list li {
-  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 .nav_list li + li {
   margin-left: 1rem;
+}
+
+.list_item_header {
+  transform: scaleY(0);
+  transition: 300ms ease-in;
+}
+
+.list_item_header_active{
+  transform: scaleY(1) translateX(30px);
+  transition: 300ms ease-in;
 }
