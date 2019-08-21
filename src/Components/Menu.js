@@ -2,7 +2,8 @@ import React from 'react';
 import menu from '../svg/menu.svg';
 
 const style = {
-  width: "45px",
+  width: "1.5rem",
+  height: "1.5rem",
   transform: "rotate(180deg) scaleY(-1)",
 }
 

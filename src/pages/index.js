@@ -11,6 +11,13 @@ const Hello = () => {
     <Layout>
       <Seo pageTitle={title} />
       <h1>Hello from gatsby</h1>
+      <div>
+        <h2>Welcome to my websitet</h2>
+      </div>
+      <div>
+        <h3>Projects</h3>
+        <p>here all my projects</p>
+      </div>
     </Layout>
   )
 }

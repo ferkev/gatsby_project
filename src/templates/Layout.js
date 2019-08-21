@@ -1,5 +1,4 @@
 import React from "react";
-import Helmet from 'react-helmet';
 import PropsType from 'prop-types';
 import useSiteMetadata from '../hooks/useSiteMetaData';
 
@@ -14,11 +13,11 @@ const Layout = ( {children} ) => {
   return (
     <>
       <Header sitetitle={title}/>
-      <main>
+      <main className="container">
         {children}
       </main>
       <footer>
-        <p>MAde with love by kevin lefranc</p>
+        <p>Made with <strong style={{color: "red"}}>❤️</strong> by kevin Le Franc</p>
       </footer>
     </>
   )

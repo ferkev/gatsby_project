@@ -1,31 +1,28 @@
 .template_header {
   background: #005aa7;
-  position: relative;
-  top: 0;
-  left: 0;
-}
-
-nav {
-  padding: 1rem;
-  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
-nav div {
-  width: 5rem;
-  height: 5rem;
-  padding: 1rem;
-  text-align: center;
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+nav li {
   display: inline-flex;
   align-items: center;
-}
-
-.template_header li {
-  padding: 0.25rem;
-  width: 100%;
+  padding: 0.5rem;
   text-align: center;
+  height: 3rem;
 }
 
 .template_header a {
@@ -33,32 +30,44 @@ nav div {
   color: #ffffff;
 }
 
-.nav_list_active {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: auto;
-  width: 100%;
-  background-color: #005aa7;
-  position: absolute;
-  left: 0%;
-  box-shadow: 0 0 1px #000000;
-  opacity: 1;
-  transition: opacity 300ms;
+.icon_active {
+  display: none;
 }
 
-.nav_list {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: auto;
-  width: 100%;
-  background-color: #005aa7;
-  position: absolute;
-  left: 0%;
-  opacity: 0;
-  box-shadow: 0 0 1px #000000;
-  transition: opacity 300ms;
+.nav_list_active li a {
+  height: 1.5rem;
+}
+
+
+@media  (max-width: 850px) {
+  .icon_active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .nav_list {
+    display: none;
+  }
+  
+  .nav_list_active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #005aa7;
+    position: absolute;
+    left: 0%;
+    box-shadow: 0 0 1px #000000;
+  }
+  .nav_list_active li {
+    padding: 0 1rem;
+  }
+  .nav_list_active li a:hover {
+    border-bottom: 2px solid #ffffff;
+  }
 }

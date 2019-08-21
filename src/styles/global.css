@@ -12,6 +12,24 @@ body {
   line-height: 1.5;
 }
 
-image {
-  max-width: 100%;
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+footer {
+  background-color: #005aa7;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 1500px;
 }
