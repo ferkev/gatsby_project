@@ -1,0 +1,54 @@
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+}
+
+form div {
+  display: flex;
+  flex-direction: row;
+}
+
+form div + div {
+  margin-top: 1rem;
+}
+
+form div label {
+  width: 20%;
+  margin-right: 3rem;
+}
+
+form div input {
+  width: 75%;
+  border-radius: 25px;
+  border: 1px solid black;
+  padding: 0.25rem 1rem;
+}
+
+textarea {
+  width: 75%;
+  border-radius: 25px;
+  border: 1px solid black;
+  padding: 0.25rem 1rem;
+}
+
+@media (max-width: 850px) {
+
+  form {
+    display: block;
+  }
+
+  form div {
+    display : block;
+  }
+
+  form div label {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  form div input, textarea {
+    width: 100%;
+  }
+}

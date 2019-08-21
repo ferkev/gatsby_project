@@ -1,5 +1,5 @@
 import React from 'react';
-import cancel from '../svg/cancel.svg'
+import cancel from '../../svg/cancel.svg'
 
 const style = {
   width: "1.25rem",

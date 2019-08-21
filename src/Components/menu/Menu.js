@@ -1,5 +1,5 @@
 import React from 'react';
-import menu from '../svg/menu.svg';
+import menu from '../../svg/menu.svg';
 
 const style = {
   width: "1.5rem",
