@@ -18,7 +18,7 @@ Marker.PropsType = {
 const Map = () => {
 
   return (
-    <div style={{ height: '250px', width: '80%', marginLeft: "auto", marginRight: "auto"} }>
+    <div style={{ height: '250px', width: '80%', marginLeft: "auto", marginRight: "auto"}}>
       <GoogleMapReact
          bootstrapURLKeys={{
           key: `${process.env.API_GOOGLE_MAP}`

@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import { css } from '@emotion/core';
 import styled  from '@emotion/styled';
 
-import Menu from '../menu/Menu'
+import Menu from '../menu/Menu';
 import Close from '../menu/Close';
 
 
@@ -13,7 +13,7 @@ const ListItem = styled.li`
   padding: 0.5rem;
   text-align: center;
   height: 3rem;
-`
+`;
 
 const BurgerIcon = styled.div`
   &.icon_active {
@@ -28,7 +28,7 @@ const BurgerIcon = styled.div`
       height: 3rem;
     }
   }
-`
+`;
 
 const List = styled.ul`
 
@@ -62,7 +62,7 @@ const List = styled.ul`
       }
     }
   } 
-`
+`;
 
 const NavLink = styled(Link)`
   text-decoration: none;
@@ -70,33 +70,46 @@ const NavLink = styled(Link)`
   height: 1.5rem;
 `
 
+const domEvent = (fn) => {
+  fn()
+}
+
 const Header = ( {sitetitle} ) => {
 
+  // all state
   const [ menuOpen, setMenuOpen ] = useState(false);
   const [ activeClass, setActiveClass ] = useState("list_item_header");
 
+  // all ref
+  const headerRef = React.createRef();
+
+
+  const FakeHeader = () => <div style={{height: "48px", width: "100%", display: "block"}}></div>
+
   useEffect(() => {
-
-    if (menuOpen) {
-      setActiveClass("nav_list_active");
-    }
-    else {
-      setActiveClass("nav_list");
-    }
-
+    menuOpen ? setActiveClass("nav_list_active") : setActiveClass("nav_list");
   })
 
+
   return (
-    <header 
+    <>
+    <header ref={headerRef}
+      id="head"
       css={css`
         background: #005aa7;
+        z-index: 3000;
         display: flex;
         flex-direction: row;
         align-items: center;
-        position: relative;
+        position: fixed;
         top: 0;
         left: 0;
         width: 100%;
+        @media (max-width: 850px) {
+        ul {
+          display: none;
+        }
+      }
       `}
     >
       <nav 
@@ -127,11 +140,9 @@ const Header = ( {sitetitle} ) => {
         </List>
       </nav>
     </header>
+      <FakeHeader />
+    </>
   )
 }
 
 export default Header;
-
-// .nav_list_active li a {
-//   height: 1.5rem;
-// }

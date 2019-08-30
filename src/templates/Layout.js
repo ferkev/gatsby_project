@@ -9,7 +9,7 @@ import '../styles/reset.css';
 const Layout = ( {children} ) => {
 
   const { title } = useSiteMetadata();
-
+  
   return (
     <>
       <Global styles={css`
