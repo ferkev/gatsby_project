@@ -2,7 +2,7 @@ import React,  { useState, useEffect } from 'react';
 import { Link } from 'gatsby';
 import { css } from '@emotion/core';
 import styled  from '@emotion/styled';
-
+import PropsType from 'prop-types';
 import Menu from '../menu/Menu';
 import Close from '../menu/Close';
 
@@ -143,6 +143,10 @@ const Header = ( {sitetitle} ) => {
       <FakeHeader />
     </>
   )
+}
+
+Header.PropsType = {
+  sitetitle: PropsType.string.isRequired,
 }
 
 export default Header;
