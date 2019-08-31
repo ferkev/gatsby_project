@@ -1,18 +1,23 @@
 import React from 'react';
-import { image } from '../../hooks/useSiteIcons'
 import Img from "gatsby-image";
+import PropsType from 'prop-types';
 
+const GithubImage = ({image, style}) => {
 
-const GithubImage = () => {
-
-  const { image3 } = image();
-
-  return <a href="https://github.com/ferkev"><Img 
-    fluid={image3.childImageSharp.fluid}  
-    placeholderStyle={{width: `50px`, height: `50px` }}
-    alt="github"
-    />
+  return (
+    <a href="https://github.com/ferkev">
+      <Img 
+      fluid={image}  
+      placeholderStyle={style}
+      alt="github"
+      />
     </a>
+  )
+}
+
+GithubImage.PropsType = {
+  image: PropsType.string.isRequired,
+  style: PropsType.object.isRequired
 }
 
 export default GithubImage;

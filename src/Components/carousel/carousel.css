@@ -1,0 +1,36 @@
+
+.style1 {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: 250px;
+  text-align: center;
+  background-color: red;
+  margin: 1rem;
+}
+
+.style2 {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 500px;
+  height: 250px;
+  text-align: center;
+  background-color: green;
+  margin: 1rem;
+}
+
+.style3 {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 300px;
+  width: 500px;
+  height: 250px;
+  text-align: center;
+  background-color: blue;
+  margin: 1rem;
+}

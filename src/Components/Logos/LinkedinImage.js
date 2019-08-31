@@ -1,18 +1,23 @@
 import React from 'react';
-import { image } from '../../hooks/useSiteIcons'
 import Img from "gatsby-image";
+import PropsType from 'prop-types';
 
+const LinkedinImage = ({image, style}) => {
 
-const LinkedinImage = () => {
-
-  const { image1 } = image();
-
-  return <a href="https://www.linkedin.com/in/kevin-le-franc-082962158/"><Img 
-    fluid={image1.childImageSharp.fluid}  
-    placeholderStyle={{width: `50px`, height: `50px` }}
-    alt="linkedin"
-    />
+  return (
+    <a href="https://www.linkedin.com/in/kevin-le-franc-082962158/">
+      <Img 
+      fluid={image}  
+      placeholderStyle={style}
+      alt="linkedin"
+      />
     </a>
+  )
+}
+
+LinkedinImage.PropsType = {
+  image: PropsType.string.isRequired,
+  style: PropsType.object.isRequired
 }
 
 export default LinkedinImage;

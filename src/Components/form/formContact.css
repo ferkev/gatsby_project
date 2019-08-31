@@ -33,6 +33,21 @@ textarea {
   padding: 0.25rem 1rem;
 }
 
+.ValidationForm button {
+  border-radius: 25px;
+}
+
+.ValidationForm button + button {
+  margin-left: 25px;
+}
+
+.ValidationForm {
+  margin: 1rem;
+  align-self: center;
+  display: inline-block;
+  margin-left: 20%;
+}
+
 @media (max-width: 850px) {
 
   form {
@@ -51,4 +66,21 @@ textarea {
   form div input, textarea {
     width: 100%;
   }
+
+  .ValidationForm {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+  }
+
+  .ValidationForm button {
+    display: block;
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  .ValidationForm button + button {
+    margin-left: 0;
+  }
+  
 }

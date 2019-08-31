@@ -1,8 +1,6 @@
 import React from 'react';
 import Layout from '../templates/Layout';
 import Seo from '../Components/Seo';
-import '../styles/form.css';
-
 import Map from '../Components/map/MapContainer';
 import FormContact from '../Components/form/FormContact';
 

@@ -14,13 +14,13 @@ export const frgLogo =  graphql`
 export const image = () => {
   const data = useStaticQuery(graphql`
     query {
-      image1: file(relativePath: {eq: "linkedin.png"}){
+      linkedin: file(relativePath: {eq: "linkedin.png"}){
         ...frgLogo
       },
-      image2: file(relativePath: {eq: "twitter.png"}){
+      twitter: file(relativePath: {eq: "twitter.png"}){
         ...frgLogo
       },
-      image3: file(relativePath: {eq: "github.png"}){
+      github: file(relativePath: {eq: "github.png"}){
         ...frgLogo
       }
     }

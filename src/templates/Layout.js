@@ -29,6 +29,7 @@ const Layout = ( {children} ) => {
         
         h1 {
           font-size: 2rem;
+          margin: 1rem 0;
         }
         
         h2 {

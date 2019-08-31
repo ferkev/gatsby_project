@@ -1,18 +1,23 @@
 import React from 'react';
-import { image } from '../../hooks/useSiteIcons'
 import Img from "gatsby-image";
+import PropsType from 'prop-types'
 
+const TwitterImage = ({image, style}) => {
 
-const TwitterImage = () => {
-
-  const { image2 } = image();
-
-  return <a href="https://twitter.com/"><Img 
-    fluid={image2.childImageSharp.fluid}  
-    placeholderStyle={{width: `50px`, height: `50px` }}
-    alt="twitter"
-    />
+  return (
+    <a href="https://twitter.com/">
+      <Img 
+      fluid={image}  
+      placeholderStyle={style}
+      alt="twitter"
+      />
     </a>
+  )
+}
+
+TwitterImage.PropsType = {
+  image: PropsType.string.isRequired,
+  style: PropsType.object.isRequired
 }
 
 export default TwitterImage;
