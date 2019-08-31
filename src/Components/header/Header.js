@@ -5,7 +5,7 @@ import styled  from '@emotion/styled';
 import PropsType from 'prop-types';
 import Menu from '../menu/Menu';
 import Close from '../menu/Close';
-
+import Logo from "../Logos/Logos"
 
 const ListItem = styled.li`
   display: inline-flex;
@@ -42,10 +42,10 @@ const List = styled.ul`
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      width: 100%;
       background-color: #005aa7;
       position: absolute;
       top: 100%;
+      width: 100%;
       left: 0%;
       box-shadow: 0 0 1px #000000;
       
@@ -80,6 +80,8 @@ const Header = ( {sitetitle} ) => {
   const [ menuOpen, setMenuOpen ] = useState(false);
   const [ activeClass, setActiveClass ] = useState("list_item_header");
 
+
+  // /images/GitHub-Mark-64px.png
   // all ref
   const headerRef = React.createRef();
 
@@ -115,8 +117,8 @@ const Header = ( {sitetitle} ) => {
       <nav 
         css={css`
           display: flex;
-          flex-direction: column;
-          justify-content: center;
+          flex-direction: row;
+          align-items: center;
           width: 100%;
         `}
       >
@@ -138,6 +140,7 @@ const Header = ( {sitetitle} ) => {
             <NavLink to="/Contact">Contact</NavLink>
           </ListItem>
         </List>
+        <Logo />
       </nav>
     </header>
       <FakeHeader />
