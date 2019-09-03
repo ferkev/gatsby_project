@@ -3,7 +3,7 @@ import Layout from '../templates/Layout';
 import Seo from '../Components/Seo';
 import useSiteMetaData from '../hooks/useSiteMetaData';
 import Carousel from '../Components/carousel/Carousel';
-import ArticleList from '../Components/article/Article';
+import ArticleList from '../Components/article/ArticleList';
 
 
 const Index = () => {
