@@ -3,8 +3,8 @@ import { Link } from 'gatsby';
 import { css } from '@emotion/core';
 import styled  from '@emotion/styled';
 import PropsType from 'prop-types';
-import Menu from '../menu/Menu';
-import Close from '../menu/Close';
+import Menu from '../menu/menu';
+import Close from '../menu/close';
 import Logo from "../logos/logo";
 
 const ListItem = styled.li`

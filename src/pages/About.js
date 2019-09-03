@@ -1,6 +1,6 @@
 import React from 'react';
-import Layout from '../templates/Layout';
-import Seo from '../Components/Seo';
+import Layout from '../templates/layout';
+import Seo from '../Components/seo';
 
 const About = () => {
   return (
