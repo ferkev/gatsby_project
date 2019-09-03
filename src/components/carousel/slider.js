@@ -5,7 +5,7 @@ import { StaticQuery, graphql, Link } from 'gatsby';
 import chevron from '../../svg/chevron.svg'
 
 
-class Carousel extends React.Component {
+class Slider extends React.Component {
 
   constructor(props) {
     super(props)
@@ -122,6 +122,6 @@ export default props => (
         }
       }
     `}
-    render={({ carousel1, carousel3 }) => <Carousel images={{ carousel1, carousel3 }} {...props}/>}
+    render={({ carousel1, carousel3 }) => <Slider images={{ carousel1, carousel3 }} {...props}/>}
   />
 );
