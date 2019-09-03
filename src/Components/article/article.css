@@ -1,0 +1,43 @@
+.title_projects {
+  text-align: center;
+  margin: 1rem;
+  padding: .25rem;
+}
+
+.projects {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 75%;
+}
+
+.article_projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+
+.article_projects + .article_projects  {
+  margin-left: 1rem;
+}
+
+.article_projects h4 {
+  padding: .25rem;
+}
+
+.article_projects  p {
+  margin: 1rem;
+}
+
+.article_projects a {
+  align-self: center;
+  margin-top: auto;
+  text-decoration: none;
+  color: #fff;
+  background-color: hsl(208, 98%, 33%);
+  padding: .25rem;
+  border-radius: 10px;
+}

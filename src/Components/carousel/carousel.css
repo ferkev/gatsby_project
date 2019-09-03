@@ -1,36 +1,85 @@
-
-.style1 {
-  display: inline-block;
-  position: absolute;
+.active {
+  display: flex;
+  text-align: center;
+  right: 0;
+  position: relative;
   top: 0;
   left: 0;
-  width: 500px;
-  height: 250px;
-  text-align: center;
-  background-color: red;
-  margin: 1rem;
+  justify-content: center;
+  align-items: center;
 }
 
-.style2 {
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 500px;
-  height: 250px;
+#imageslide{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  background-color: green;
-  margin: 1rem;
 }
 
-.style3 {
-  display: inline-block;
+.carousel_title {
   position: absolute;
   top: 0;
-  left: 300px;
-  width: 500px;
-  height: 250px;
-  text-align: center;
-  background-color: blue;
-  margin: 1rem;
+  width: 85%;
+  font-size: 5rem;
+  font-family: -apple-system, 'Courier New', Courier, monospace, sans-serif;
+  color: #dfe6e9;
+  text-shadow:
+       -3px 3px 0 #000,
+       -3px 3px 0 #2d3436;
+}
+
+.active img {
+  height: 30rem;
+  width: 75%;
+}
+
+#prev {
+  display: inline-block;
+  cursor: pointer;
+}
+
+#next {
+  display: inline-block;
+  cursor: pointer;
+}
+
+#prev img {
+  transform: rotate(180deg);
+  width: 2rem;
+  height: auto;
+}
+#next img {
+  width: 2rem;
+  height: auto;
+}
+
+@media screen and (max-width: 850px) {
+  .active img {
+    width: 85%;
+    height: 10rem;
+  }
+
+  .carousel_title {
+    font-size: 3rem;
+  }
+
+  #prev img {
+    width: 1rem;
+  }
+  #next img {
+    width: 1rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .active img {
+    height: 10rem;
+    width: 85%;
+  }
+
+  .carousel_title {
+    font-size: 3rem;
+  }
 }

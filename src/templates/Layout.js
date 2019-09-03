@@ -4,6 +4,7 @@ import { Global, css } from '@emotion/core'
 import useSiteMetadata from '../hooks/useSiteMetaData';
 
 import Header from '../Components/header/Header';
+
 import '../styles/reset.css';
 
 const Layout = ( {children} ) => {
@@ -35,6 +36,14 @@ const Layout = ( {children} ) => {
         h2 {
           font-size: 1.75rem;
         }
+
+        h3 {
+          font-size: 1.5rem;
+        }
+
+        h4 {
+          font-size: 1.25rem;
+        }
         
         footer {
           background-color: #005aa7;
@@ -47,7 +56,7 @@ const Layout = ( {children} ) => {
           width: 90%;
           margin-left: auto;
           margin-right: auto;
-          height: 1500px;
+          height: 1100px;
         }
       `} />
       <Header sitetitle={title}/>
@@ -56,6 +65,7 @@ const Layout = ( {children} ) => {
       </main>
       <footer>
         <p>Made with <strong style={{color: "red"}}>❤️</strong> by kevin Le Franc</p>
+        <p>© Kevin Le Franc - All rights reserved</p>
       </footer>
     </>
   )

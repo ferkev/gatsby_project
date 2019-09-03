@@ -3,6 +3,8 @@ import Layout from '../templates/Layout';
 import Seo from '../Components/Seo';
 import useSiteMetaData from '../hooks/useSiteMetaData';
 import Carousel from '../Components/carousel/Carousel';
+import ArticleList from '../Components/article/Article';
+
 const Hello = () => {
 
   const { title } = useSiteMetaData();
@@ -10,14 +12,11 @@ const Hello = () => {
   return (
     <Layout>
       <Seo pageTitle={title} />
-      <h1>Hello from gatsby</h1>
       <div>
-        <h2>Welcome to my websitet</h2>
         <Carousel />
       </div>
-      <div>
-        <h3>Projects</h3>
-        <p>here all my projects</p>
+      <div style={{ display: "flex", flexDirection: "column", flexWrap: "wrap", justifyContent: "center", alignItems: "center"}}>
+        <ArticleList />
       </div>
     </Layout>
   )
