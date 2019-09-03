@@ -8,7 +8,7 @@ const NotFoundPage = () => {
       <Seo pageTitle="error" />
       <p>Page not Found</p>
       <p>You can return on the home page with this link</p>
-      <Link to ="/">back to home</Link>
+      <Link to="/">back to home</Link>
     </>
   )
 }

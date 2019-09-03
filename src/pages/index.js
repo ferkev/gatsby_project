@@ -6,7 +6,7 @@ import Carousel from '../Components/carousel/Carousel';
 import ArticleList from '../Components/article/ArticleList';
 
 
-const Index = () => {
+export default () => {
 
   const { title } = useSiteMetaData();
 
@@ -22,5 +22,3 @@ const Index = () => {
     </Layout>
   )
 }
-
-export default Index;

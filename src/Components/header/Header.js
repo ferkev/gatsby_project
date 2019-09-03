@@ -70,10 +70,6 @@ const NavLink = styled(Link)`
   height: 1.5rem;
 `
 
-const domEvent = (fn) => {
-  fn()
-}
-
 const Header = ( {sitetitle} ) => {
 
   // all state
@@ -134,10 +130,10 @@ const Header = ( {sitetitle} ) => {
             <NavLink to="/">{sitetitle}</NavLink>
           </ListItem>
           <ListItem>
-            <NavLink to="/About">About</NavLink>
+            <NavLink to="/About/">About</NavLink>
           </ListItem>
           <ListItem>
-            <NavLink to="/Contact">Contact</NavLink>
+            <NavLink to="/Contact/">Contact</NavLink>
           </ListItem>
         </List>
         <Logos />
