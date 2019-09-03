@@ -1,6 +1,6 @@
 import React from 'react';
 import Img from "gatsby-image";
-import PropsType from 'prop-types'
+import PropsType from 'prop-types';
 
 const TwitterImage = ({image, style}) => {
 

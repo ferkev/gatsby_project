@@ -5,7 +5,7 @@ import styled  from '@emotion/styled';
 import PropsType from 'prop-types';
 import Menu from '../menu/Menu';
 import Close from '../menu/Close';
-import Logo from "../logos/Logo"
+import Logo from "../logos/Logo";
 
 const ListItem = styled.li`
   display: inline-flex;
