@@ -1,8 +1,8 @@
 import React from 'react';
-import Layout from '../templates/Layout';
-import Seo from '../Components/Seo';
-import Map from '../Components/MapContainer/mapContainer';
-import FormContact from '../Components/Form/FormContact';
+import Layout from '../templates/layout';
+import Seo from '../components/seo';
+import Map from '../components/mapContainer/mapContainer';
+import FormContact from '../components/form/formContact';
 
 const Contact = () => {
   return (

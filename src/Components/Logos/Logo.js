@@ -1,8 +1,8 @@
 import React from 'react';
 import { image } from '../../hooks/useSiteIcons'
-import LinkedinImage from './LinkedinImage';
-import TwitterImage from "./TwitterImage";
-import GithubImage from "./GithubImage";
+import LinkedinImage from './linkedinImage';
+import TwitterImage from "./twitterImage";
+import GithubImage from "./githubImage";
 
 const Logo = () => {
 
