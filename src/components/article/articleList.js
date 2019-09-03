@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from './Image';
+import Image from './image';
 import projectImage from '../../hooks/useImage';
 import './article.css';
 
