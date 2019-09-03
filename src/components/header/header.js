@@ -127,10 +127,10 @@ const Header = ( {sitetitle} ) => {
             <NavLink to="/">{sitetitle}</NavLink>
           </ListItem>
           <ListItem>
-            <NavLink to="/About/">About</NavLink>
+            <NavLink to="/about/">About</NavLink>
           </ListItem>
           <ListItem>
-            <NavLink to="/Contact/">Contact</NavLink>
+            <NavLink to="/contact/">Contact</NavLink>
           </ListItem>
         </List>
         <Logo />
