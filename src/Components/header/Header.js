@@ -5,7 +5,7 @@ import styled  from '@emotion/styled';
 import PropsType from 'prop-types';
 import Menu from '../menu/Menu';
 import Close from '../menu/Close';
-import Logo from "../logos/Logos"
+import Logos from "../logos/Logos"
 
 const ListItem = styled.li`
   display: inline-flex;
@@ -140,7 +140,7 @@ const Header = ( {sitetitle} ) => {
             <NavLink to="/Contact">Contact</NavLink>
           </ListItem>
         </List>
-        <Logo />
+        <Logos />
       </nav>
     </header>
       <FakeHeader />

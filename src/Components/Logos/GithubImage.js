@@ -1,6 +1,6 @@
-import React from 'react';
-import Img from "gatsby-image";
-import PropsType from 'prop-types';
+import React from './node_modules/react';
+import Img from "./node_modules/gatsby-image";
+import PropsType from './node_modules/prop-types';
 
 const GithubImage = ({image, style}) => {
 

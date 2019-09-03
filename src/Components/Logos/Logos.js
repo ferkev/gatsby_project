@@ -4,7 +4,7 @@ import LinkedinImage from './LinkedinImage';
 import TwitterImage from "./TwitterImage"
 import GithubImage from "./GithubImage";
 
-const Logo = () => {
+const Logos = () => {
 
   const { linkedin, twitter, github } = image();
   
@@ -44,4 +44,4 @@ const Logo = () => {
   )
 }
 
-export default Logo;
+export default Logos;
