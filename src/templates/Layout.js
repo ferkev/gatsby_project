@@ -2,7 +2,7 @@ import React from "react";
 import PropsType from 'prop-types';
 import { Global, css } from '@emotion/core';
 import useSiteMetadata from '../hooks/useSiteMetaData';
-import Header from '../Components/header/header';
+import Header from '../Components/Header/header';
 
 import '../styles/reset.css';
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import './formContact.css';
 import { jsx } from '@emotion/core';
-import Input from './input/input';
+import Input from './Input/input';
 
 
 const labels = [
