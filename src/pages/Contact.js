@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from '../templates/layout';
+import Layout from '../templates/Layout';
 import Seo from '../Components/Seo';
 import Map from '../Components/MapContainer/mapContainer';
 import FormContact from '../Components/Form/FormContact';

@@ -1,9 +1,9 @@
 import React from 'react';
-import Layout from '../templates/layout';
+import Layout from '../templates/Layout';
 import Seo from '../Components/Seo';
 import useSiteMetaData from '../hooks/useSiteMetaData';
 import Carousel from '../Components/Carousel/Carousel';
-import ArticleList from '../Components/Article/articleList';
+import ArticleList from '../Components/Article/ArticleList';
 
 
 export default () => {

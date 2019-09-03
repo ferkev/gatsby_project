@@ -3,9 +3,9 @@ import { Link } from 'gatsby';
 import { css } from '@emotion/core';
 import styled  from '@emotion/styled';
 import PropsType from 'prop-types';
-import Menu from '../Menu/menu';
-import Close from '../Menu/close';
-import Logo from "../Logos/logo";
+import Menu from '../Menu/Menu';
+import Close from '../Menu/Close';
+import Logo from "../Logos/Logo";
 
 const ListItem = styled.li`
   display: inline-flex;
