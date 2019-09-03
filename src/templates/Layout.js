@@ -2,7 +2,6 @@ import React from "react";
 import PropsType from 'prop-types';
 import { Global, css } from '@emotion/core'
 import useSiteMetadata from '../hooks/useSiteMetaData';
-
 import Header from '../Components/header/Header';
 
 import '../styles/reset.css';
@@ -56,7 +55,6 @@ const Layout = ( {children} ) => {
           width: 90%;
           margin-left: auto;
           margin-right: auto;
-          height: 1100px;
         }
       `} />
       <Header sitetitle={title}/>

@@ -1,38 +1,50 @@
-.active {
+#carousel {
   display: flex;
   text-align: center;
   right: 0;
-  position: relative;
-  top: 0;
-  left: 0;
   justify-content: center;
   align-items: center;
 }
 
-#imageslide{
-  width: 70%;
+#slide{
+  height: 25rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  color: #fff;
+  width: 70%;
 }
 
-.carousel_title {
-  position: absolute;
-  top: 0;
-  width: 85%;
-  font-size: 5rem;
-  font-family: -apple-system, 'Courier New', Courier, monospace, sans-serif;
-  color: #dfe6e9;
-  text-shadow:
-       -3px 3px 0 #000,
-       -3px 3px 0 #2d3436;
+#slide h1,
+#slide p {
+  padding: 0 1rem;
+  color: #FFFFFF;
+  text-shadow:hsl(0, 0%, 0%) 2px 0px 0px;
+
 }
 
-.active img {
-  height: 30rem;
-  width: 75%;
+#slide h1 {
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+
+#slide a {
+  margin-top: 2rem;
+  text-decoration: none;
+  color: #fff;
+  background-color: hsl(208, 98%, 33%);
+  padding: .5rem;
+  border-radius: 100px;
+  box-shadow: 0 2px 3px black,
+              0 2px 3px black,
+              0 2px 3px black;
+}
+
+#slide a:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 1px black;
 }
 
 #prev {
@@ -55,31 +67,35 @@
   height: auto;
 }
 
-@media screen and (max-width: 850px) {
-  .active img {
-    width: 85%;
-    height: 10rem;
+@media screen and (max-width: 1500px) {
+
+  #slide a {
+    padding: 0.25rem;
   }
 
-  .carousel_title {
-    font-size: 3rem;
+}
+@media screen and (max-width: 850px) {
+
+  #slide {
+    height: 15rem;
+  }
+
+  #slide h1 {
+    font-size: 1.5rem;
   }
 
   #prev img {
-    width: 1rem;
+    width: 1.5rem;
   }
   #next img {
-    width: 1rem;
+    width: 1.5rem;
   }
 }
 
 @media screen and (max-width: 650px) {
-  .active img {
-    height: 10rem;
-    width: 85%;
-  }
 
   .carousel_title {
-    font-size: 3rem;
+    font-size: 2rem;
   }
+
 }

@@ -1,7 +1,6 @@
 import React from 'react';
 import "./carousel.css";
-import { StaticQuery, graphql } from 'gatsby';
-
+import { StaticQuery, graphql, Link } from 'gatsby';
 
 import chevron from '../../svg/chevron.svg'
 
@@ -13,7 +12,7 @@ class Carousel extends React.Component {
     this.state = {
       imagesList: [],
       first: 0,
-      allText : ["Business", "Agile methods", "Best practices"],
+      legends: ["Welcome to my website", "Best practices"],
       className: {
         active: "active"
       },
@@ -24,10 +23,8 @@ class Carousel extends React.Component {
 
   componentDidMount() {
     this.setState((prevState, props) => {
-
-      console.log(props.images.carousel1.childImageSharp.fluid)
        return {
-        imagesList : [...prevState.imagesList, props.images.carousel1.childImageSharp.fluid.src, props.images.carousel2.childImageSharp.fluid.src, props.images.carousel3.childImageSharp.fluid.src]
+        imagesList : [...prevState.imagesList, props.images.carousel1.childImageSharp.fluid.src, props.images.carousel3.childImageSharp.fluid.src]
        };
     })
   }
@@ -52,7 +49,7 @@ class Carousel extends React.Component {
       this.setState({first: this.state.first - 1})
     }
     else if (this.state.first <= 0) {
-      this.setState( {first: 2 });
+      this.setState( {first:  this.state.imagesList.length - 1 });
     }
 
     this.changeImage()
@@ -60,8 +57,8 @@ class Carousel extends React.Component {
 
 
   changeImage() {
-    const image = document.querySelector("#imageslide");
-    image.src = this.state.imagesList[this.state.first];
+    const image = document.querySelector("#slide");
+    image.style.backgroundImage = `url('${this.state.imagesList[this.state.first]}')`;
   }
 
   componentWillUnmount() {
@@ -72,20 +69,38 @@ class Carousel extends React.Component {
   }
 
   render(){
-    console.log(this.state.imagesList)
+
+    const style = {
+      backgroundImage: `url('${this.state.imagesList[this.state.first]}')`,
+      backgroundRepeat: "no-repeat",
+      backgroundCover: "cover",
+      backgroundPosition: "center"
+    }
+
+    const ButtonStyle = {
+      textDecoration: "none",
+      color: "#fff",
+      backgroundColor: "red"
+    }
+    
     return (
       <>
-        <div style={{textAlign: "center"}}>
-          <div className={this.state.className.active}>
-            <h1 className="carousel_title">{this.state.allText[this.state.first]}</h1>
-            <span id="prev" onClick={() => this.handleClickPrev()}>
-              <img src={chevron} alt="right chevron"/>
-            </span>
-            <img id="imageslide" src={this.state.imagesList[this.state.first]} alt="background"/>
-            <span id="next" onClick={() => this.handleClickNext()}>
-              <img src={chevron} alt="left chevron"/>
-            </span>
+        <div id="carousel" style={{textAlign: "center"}}>
+          <span id="prev" onClick={() => this.handleClickPrev()}>
+            <img src={chevron} alt="right chevron"/>
+          </span>
+          <div id="slide" style={style} className={this.state.className.active}>
+            <h1>{this.state.legends[this.state.first]}</h1>
+            <p>A website created for create and test gatsby but it's my blog too, have great journey</p>
+            <Link  
+              to="/Contact"
+            >
+              Contact me
+            </Link>
           </div>
+          <span id="next" onClick={() => this.handleClickNext()}>
+            <img src={chevron} alt="left chevron"/>
+          </span>
         </div>
       </>
     )
@@ -102,14 +117,11 @@ export default props => (
         carousel1: file(relativePath: {eq: "carousel1.jpg"}){
           ...frgImage
         },
-        carousel2: file(relativePath: {eq: "carousel2.jpg"}){
-          ...frgImage
-        },
-        carousel3: file(relativePath: {eq: "carousel3.png"}){
+        carousel3: file(relativePath: {eq: "carousel3.jpg"}){
           ...frgImage
         }
       }
     `}
-    render={({ carousel1, carousel2, carousel3 }) => <Carousel images={{ carousel1, carousel2, carousel3 }} {...props}/>}
+    render={({ carousel1, carousel3 }) => <Carousel images={{ carousel1, carousel3 }} {...props}/>}
   />
 );

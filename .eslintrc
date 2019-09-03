@@ -10,9 +10,7 @@
   "rules": {
     "no-console": "off",
     "no-unused-vars": "off",
-    "no-debugger": "off",
-    "no-unused-labels": "off",
-    "no-unused-expressions": "off",
+    "no-unused-labels": "off"
   },
   "plugins": [],
   "env": {
