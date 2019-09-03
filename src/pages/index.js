@@ -5,7 +5,8 @@ import useSiteMetaData from '../hooks/useSiteMetaData';
 import Carousel from '../Components/carousel/Carousel';
 import ArticleList from '../Components/article/Article';
 
-const Hello = () => {
+
+const Index = () => {
 
   const { title } = useSiteMetaData();
 
@@ -22,4 +23,4 @@ const Hello = () => {
   )
 }
 
-export default Hello;
+export default Index;
